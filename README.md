@@ -1,7 +1,7 @@
 #  Crafting Handbook
 
 ## Table of Contents
-* Fundamentals of Crafting
+* [Fundamentals of Crafting](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#fundamentals-of-crafting)
 * Required Level (rlvl)
 * Affix Level (alvl)
 * General Tips
