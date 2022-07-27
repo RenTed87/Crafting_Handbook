@@ -93,8 +93,6 @@ The required level of an item is the minimum character level that may use it. Fo
 
 where rlvl_affix is the highest levelreq amongst the random affixes that spawned, and N is the number of random affixes (1, 2, 3, or 4).
   
-Ref: Things you SHOULD know about Diablo 2, section 23, http://classic.battle.net/forums/thread.aspx?fn=d2-general&t=1312543
-  
 Example: a crafted Amulet with 4 random affixes and +2 to [class] skills having the highest levelreq (rlvl_affix = 67) will have rlvl = 67 + 10 + 3*4 = 89. Pre-1.11, certain charged affixes could force the rlvl beyond 99 (nice move, Blizzard); this was remedied in v1.11: if rlvl > 98, then rlvl = 98. Despite this, in certain cases the rlvl formula is still of some concern.
 
 
@@ -114,8 +112,6 @@ When an item with affixes is generated, the game calculates the item's affix lev
         (3) ELSE alvl = 2*max{Ilvl,qlvl} - 99
 
 Ilvl cannot exceed 98 (see the Ilvl formula) and alvl is capped at 99
-  
-Ref: Basin Wiki, D2 Affix Level Chart, http://wiki.theamazonbasin.com/index.php/D2_Affix_Level_Chart
   
 Only Circlets, Sorceress Orbs, Staves, and Normal + Exceptional Wands have magiclvl > 0. However, there are no craft recipes for Circlets and Orbs, and rather few players would craft Staves or Wands, seeing as the unique versions and rune words are practically beyond competition.
   
