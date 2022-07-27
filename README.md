@@ -1,9 +1,5 @@
 # Crafting Handbook
 
-
-
-
-
 # Table of Contents
 * Fundamentals of Crafting
 * Required Level (rlvl)
@@ -17,8 +13,7 @@
 * Appendix
 
 # Fundamentals of Crafting
-
-# Level Terms
+**Level Terms**  
 To keep track of the various levels involved, we will be making frequent use of these abbreviations,
 
 * alvl - affix level of the crafted item; see the Affix Level (alvl) section
@@ -30,23 +25,16 @@ To keep track of the various levels involved, we will be making frequent use of 
 * qlvl - base item Quality Level: http://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml
 * rlvl - required level; see the Required Level (rlvl) section
 
-# Crafted Items at the Arreat Summit
-
-* http://classic.battle.net/diablo2exp/items/crafteditems.shtml
-//
+**Crafted Items at the Arreat Summit**  
+http://classic.battle.net/diablo2exp/items/crafteditems.shtml  
 Sufficient if you do not mind not knowing every single detail.
 
-Craft Recipes
+**Craft Recipes**  
 As of now there are 4 classes of crafted items, each containing 9 recipes (see the Arreat Summit Crafted Items page),
-
-
-Magic Item (specific type) + Rune (specific) + Perfect Sapphire + Jewel --> Hit Power Item (of the same type)
-
-Magic Item (specific type) + Rune (specific) + Perfect Ruby + Jewel --> Blood Item (of the same type)
-
-Magic Item (specific type) + Rune (specific) + Perfect Amethyst + Jewel --> Caster Item (of the same type)
-
-Magic Item (specific type) + Rune (specific) + Perfect Emerald + Jewel --> Safety Item (of the same type)
+* <font color="blue">Magic Item</font> (specific type) + Rune (specific) + Perfect Sapphire + Jewel --> Hit Power Item (of the same type)
+* Magic Item (specific type) + Rune (specific) + Perfect Ruby + Jewel --> Blood Item (of the same type)
+* Magic Item (specific type) + Rune (specific) + Perfect Amethyst + Jewel --> Caster Item (of the same type)
+* Magic Item (specific type) + Rune (specific) + Perfect Emerald + Jewel --> Safety Item (of the same type)
 
 
 Listen very carefully; I shall say this only once,
