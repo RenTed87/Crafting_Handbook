@@ -102,92 +102,80 @@ Example: a crafted Amulet with 4 random affixes and +2 to [class] skills having 
 
 When an item with affixes is generated, the game calculates the item's affix level (alvl), as described below. Then it looks up the affixes available for that item type and affix level. Every affix has a level, the minimum alvl which must be met by an item of the proper type to acquire that affix. Higher alvl ~ larger affix pool. For a crafted item, 1-4 affixes are picked according to Ilvl and affix generation rules. Due to differences in affix frequencies, some affixes are slightly more likely to spawn than others. Players who have installed ATMA may find detailed information on every single affix in MagicPrefix.txt and MagicSuffix.txt.
 
-    The affix level of a crafted item is of crucial importance, because it effectively determines the size of the affix pool.
-    When looking at affixes, we have to consider: level, levelreq, and group (it is impossible to get more than one affix from a given group).
+* The affix level of a crafted item is of crucial importance, because it effectively determines the size of the affix pool.
+* When looking at affixes, we have to consider: level, levelreq, and group (it is impossible to get more than one affix from a given group).
 
-Affix Level Calculation
+**Affix Level Calculation**
 
-Code
-IF(magiclvl > 0)
+     IF(magiclvl > 0)
+        (1) THEN alvl = max{Ilvl,qlvl} + magiclvl
+     ELSE IF(max{Ilvl,qlvl} < 99 - int(qlvl/2))
+        (2) THEN alvl = max{Ilvl,qlvl} - int(qlvl/2)
+        (3) ELSE alvl = 2*max{Ilvl,qlvl} - 99
 
-   (1) THEN alvl = max{Ilvl,qlvl} + magiclvl
-
-ELSE IF(max{Ilvl,qlvl} < 99 - int(qlvl/2))
-
-   (2) THEN alvl = max{Ilvl,qlvl} - int(qlvl/2)
-   (3) ELSE alvl = 2*max{Ilvl,qlvl} - 99
-
-; Ilvl cannot exceed 98 (see the Ilvl formula) and alvl is capped at 99
-
+Ilvl cannot exceed 98 (see the Ilvl formula) and alvl is capped at 99
+  
 Ref: Basin Wiki, D2 Affix Level Chart, http://wiki.theamazonbasin.com/index.php/D2_Affix_Level_Chart
-
+  
 Only Circlets, Sorceress Orbs, Staves, and Normal + Exceptional Wands have magiclvl > 0. However, there are no craft recipes for Circlets and Orbs, and rather few players would craft Staves or Wands, seeing as the unique versions and rune words are practically beyond competition.
-
+  
 Consult the Arreat Summit for qlvl (and magiclvl),
 
-    http://classic.battle.net/diablo2exp/items/ringsnamulets.shtml
-    http://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml
-
-Notice, Amulets and Rings have qlvl 1.
-
-The Broad Picture
+* http://classic.battle.net/diablo2exp/items/ringsnamulets.shtml
+* http://classic.battle.net/diablo2exp/items/weaponsandarmor.shtml
+  
+Notice: Amulets and Rings have qlvl 1.
+  
+**The Broad Picture**  
 For a given base item (qlvl), alvl is effectively determined by Ilvl, which in turn is given by the previous formula: Ilvl = int(clvl/2) + int(ilvl/2). See Appendix for a compact Ilvl table based on gambling / shopping and crafting magic items. If we can find suitable clvl and ilvl so that the alvl is at least equal to the highest level amongst the affixes we desire, then we always have a chance of rolling that affix as well as any affixes with a lower level.
 
 Crafting efficiently is thus a matter of using the affix level formulae to our advantage,
 
-    We pick a craft recipe and look up the qlvl(s).
-    For Staves and Wands (not Elite Wands), we use (1).
-    For other base items, we consider max{Ilvl,qlvl} < 99 - int(qlvl/2),
-    a ) Assuming this is true, from (2) we get the minimum Ilvl required for the desired alvl.
-    b ) Otherwise, we use (3) in a similar manner.
-    Turning to the Ilvl formula, we work out suitable values of clvl and ilvl.
+* We pick a craft recipe and look up the qlvl(s).
+* For Staves and Wands (not Elite Wands), we use (1).
+* For other base items, we consider max{Ilvl,qlvl} < 99 - int(qlvl/2),
+* a) Assuming this is true, from (2) we get the minimum Ilvl required for the desired alvl.
+* b) Otherwise, we use (3) in a similar manner.
+* Turning to the Ilvl formula, we work out suitable values of clvl and ilvl.
 
-Now, before we immerse ourselves in numbers and calculations, first some advice on gathering craft material ...
-
+Now, before we immerse ourselves in numbers and calculations, but first, some advice on gathering craft material...
 
 ## General Tips
-
 Crafting is entirely straightforward if we do not care about the details, but without the requisite information at hand, it may just as well be a complete waste of resources. Since the odds of crafting what you want are usually quite low already, you could at least do yourself a favour by ensuring that bad luck is the only reason you have to craft repeatedly.
-
-Checklist
-
-    Know what you want; which modifiers do you desire ? Check if they can possibly spawn on that type of item.
-    Look up level, levelreq, and group for each affix. Google: Affixes for LoD-items Patch 1.11 (pick the first link).
-    Always check that the Ilvl, and hence the alvl, of the craft will be sufficiently large to generate the higher level affix.
-    Run the higher levelreq and number of random affixes in the rlvl formula if the required level is of any concern.
+  
+**Checklist**
+* Know what you want; which modifiers do you desire ? Check if they can possibly spawn on that type of item.
+* Look up level, levelreq, and group for each affix: https://planetdiablo.eu/diablo2/itemdb/affix_index.php?lang=en&version=lod&patch=111
+* Always check that the Ilvl, and hence the alvl, of the craft will be sufficiently large to generate the higher level affix.
+* Run the higher levelreq and number of random affixes in the rlvl formula if the required level is of any concern.
 
 Alright, but where do we quickly gather magic items for crafting ? And how is the ilvl determined ?
+  
+**Gambling**
+* http://classic.battle.net/diablo2exp/basics/gambling.shtml
+  
+Notice: only character level matters when gambling. Formally,
 
-Gambling
+    ilvl = clvl - 5 + rnd(10) ;  capped below at 5 and above at 99
 
-    http://classic.battle.net/diablo2exp/basics/gambling.shtml
-
-Notice, only character level matters when gambling. Formally,
-
-Code
-ilvl = clvl - 5 + rnd(10) ;  capped below at 5 and above at 99
-
-where rnd(10) returns a random integer from 0 to 9. Thus, the gambled ilvl ranges from clvl - 5 to clvl - 5 + 9 = clvl + 4. That being said, it pays to gamble in Hell, because the partial refund (up to 35 k Gold) is greater than in Normal (up to 5, 10, 15, 20, 25 k Gold, depending on Act) and Nightmare (up to 30 k Gold).
-
-Shopping
-
-    http://members.iinet.net.au/~dcarson/shopcalc.html (NPC Shopping Calculator)
-
+Where rnd(10) returns a random integer from 0 to 9. Thus, the gambled ilvl ranges from clvl - 5 to clvl - 5 + 9 = clvl + 4. That being said, it pays to gamble in Hell, because the partial refund (up to 35 k Gold) is greater than in Normal (up to 5, 10, 15, 20, 25 k Gold, depending on Act) and Nightmare (up to 30 k Gold).
+  
+**Shopping**
+* http://members.iinet.net.au/~dcarson/shopcalc.html (NPC Shopping Calculator)
+  
 As opposed to gambling, the ilvl when shopping is not subject to random behaviour,
 
-Code
-ilvl = clvl + 5 ;  capped at 99, further restricted in Normal by Act (see the NPC Shopping Calculator)
+     ilvl = clvl + 5 ;  capped at 99, further restricted in Normal by Act (see the NPC Shopping Calculator)
 
 Certain items cannot be shopped, notably Amulets and Rings. They must be either gambled or retrieved as item drops.
-
-Vendor Discount
-
-    Gheed's Fortune (Grand Charm), Ladder Only: Reduces All Vendor Prices 10-15 %
-    Edge ('TirTalAmn'), miss, Ladder Only: Reduces All Vendor Prices 15 %
+  
+**Vendor Discount**
+* Gheed's Fortune (Grand Charm), Ladder Only: Reduces All Vendor Prices 10-15 %
+* Edge ('TirTalAmn'), miss, Ladder Only: Reduces All Vendor Prices 15 %
 
 Thus, a potential discount of 25-30 % when gambling or shopping.
-
-Magic Item Drops
+  
+**Magic Item Drops**  
 Relying on these as your only craft material is not recommended unless you cannot gamble or shop the base items (e.g. Amazon Javelins and Spears). Nor is this an instruction to throw away every magic item with junk properties just because the item type could be gambled or shopped. If the ilvl of a magic item drop is sufficiently high for crafting, then keep it for that purpose. As a quick reference,
 
     ilvl = mlvl (monster drops)
@@ -198,5 +186,8 @@ Relying on these as your only craft material is not recommended unless you canno
     mlvl = Alvl + 3 (bosses and minions)
 
 The mlvl-Alvl relations hold for Nightmare and Hell. Monsters in Normal difficulty use mlvls defined in MonStats.txt. Check the Diablo II Resources section of my profile for Area Levels.
-
-End of warm-up. Time to craft !
+  
+  
+  
+  
+  
