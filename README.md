@@ -1,7 +1,7 @@
-# Crafting Handbook
+#  Crafting Handbook
 
-# Table of Contents
-* Fundamentals of Crafting
+## Table of Contents
+* [Fundamentals of Crafting](https://github.com/RenTed87/Crafting_Handbook/edit/main/README.md#fundamentals-of-crafting)
 * Required Level (rlvl)
 * Affix Level (alvl)
 * General Tips
@@ -12,7 +12,7 @@
 * Boots
 * Appendix
 
-# Fundamentals of Crafting
+## Fundamentals of Crafting
 **Level Terms**  
 To keep track of the various levels involved, we will be making frequent use of these abbreviations,
 
@@ -31,38 +31,34 @@ Sufficient if you do not mind not knowing every single detail.
 
 **Craft Recipes**  
 As of now there are 4 classes of crafted items, each containing 9 recipes (see the Arreat Summit Crafted Items page),
-* <font color="blue">Magic Item</font> (specific type) + Rune (specific) + Perfect Sapphire + Jewel --> Hit Power Item (of the same type)
+* Magic Item (specific type) + Rune (specific) + Perfect Sapphire + Jewel --> Hit Power Item (of the same type)
 * Magic Item (specific type) + Rune (specific) + Perfect Ruby + Jewel --> Blood Item (of the same type)
 * Magic Item (specific type) + Rune (specific) + Perfect Amethyst + Jewel --> Caster Item (of the same type)
 * Magic Item (specific type) + Rune (specific) + Perfect Emerald + Jewel --> Safety Item (of the same type)
 
-
 Listen very carefully; I shall say this only once,
+    -The properties of the Magic Item are LOST when the crafted item is generated.
+    -ANY Jewel works (magic, rare, unique) and the Jewel has NO impact on the result.
+    -Ethereal (transparent) magic items will be turned into opaque (not transparent) crafted items, because the Horadric Cube is used to generate a completely new item.
 
-    The properties of the Magic Item are LOST when the crafted item is generated.
-    ANY Jewel works (magic, rare, unique) and the Jewel has NO impact on the result.
+Due to the plethora of rare, set, and unique items, and rune words, most craft recipes aren't worth the trouble. It is the fact that some desired modifiers can only spawn together on crafted items which makes them competitive. By virtue of possessing both fixed properties and random affixes (prefixes, suffixes), crafted items are able to get as much as 7 or 8 modifiers.  
+  
+**Popular Crafts**
+* Caster Amulet
+* Safety Amulet
+* Blood Ring
+* Hit Power Gloves
+* Blood Gloves
+* Blood Belt
+* Caster Belt
+* Caster Boots
 
-Ethereal (transparent) magic items will be turned into opaque (not transparent) crafted items, because the Horadric Cube is used to generate a completely new item.
+Seeing how the same concepts transfer to every other craft recipe, the remaining sections should enable you to work out how to craft efficiently, no matter the recipe.  
+  
+**Fixed Properties**  
+A crafted item receives either 3 or 4 fixed properties, depending on and invariably set by the recipe, and spawning at one of the values listed, picked at random.  
 
-Due to the plethora of rare, set, and unique items, and rune words, most craft recipes aren't worth the trouble. It is the fact that some desired modifiers can only spawn together on crafted items which makes them competitive. By virtue of possessing both fixed properties and random affixes (prefixes, suffixes), crafted items are able to get as much as 7 or 8 modifiers.
-
-Popular Crafts
-
-    Caster Amulet
-    Safety Amulet
-    Blood Ring
-    Hit Power Gloves
-    Blood Gloves
-    Blood Belt
-    Caster Belt
-    Caster Boots
-
-Seeing how the same concepts transfer to every other craft recipe, the remaining sections should enable you to work out how to craft efficiently, no matter the recipe.
-
-Fixed Properties
-A crafted item receives either 3 or 4 fixed properties, depending on and invariably set by the recipe, and spawning at one of the values listed, picked at random.
-
-Random Affixes
+**Random Affixes**  
 On top of the fixed properties, a crafted item receives 1-4 random affixes, depending on Ilvl,
 
     Ilvls 1-30: 4 affixes (20 %), 3 affixes (20 %), 2 affixes (20 %), 1 affix (40 %)
