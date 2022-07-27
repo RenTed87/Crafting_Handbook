@@ -160,9 +160,7 @@ Notice: only character level matters when gambling. Formally,
 
 Where rnd(10) returns a random integer from 0 to 9. Thus, the gambled ilvl ranges from clvl - 5 to clvl - 5 + 9 = clvl + 4. That being said, it pays to gamble in Hell, because the partial refund (up to 35 k Gold) is greater than in Normal (up to 5, 10, 15, 20, 25 k Gold, depending on Act) and Nightmare (up to 30 k Gold).
   
-**Shopping**
-* http://members.iinet.net.au/~dcarson/shopcalc.html (NPC Shopping Calculator)
-  
+**Shopping**  
 As opposed to gambling, the ilvl when shopping is not subject to random behaviour,
 
      ilvl = clvl + 5 ;  capped at 99, further restricted in Normal by Act (see the NPC Shopping Calculator)
