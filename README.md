@@ -180,8 +180,7 @@ Relying on these as your only craft material is not recommended unless you canno
 The mlvl-Alvl relations hold for Nightmare and Hell. Monsters in Normal difficulty use mlvls defined in MonStats.txt. Check the Diablo II Resources section of my profile for Area Levels.
   
 ## Amulets
-# Random Affixes
-  
+### Random Affixes
 **Desired:**
 * (P) "Great Wyrm's" (level 37, levelreq 29, group 115): +61-90 to Mana
 * (P) "Prismatic" (level 42, levelreq 31, group 116): All Resistances +16-20
@@ -194,8 +193,7 @@ The mlvl-Alvl relations hold for Nightmare and Hell. Monsters in Normal difficul
   
 The highest level amongst these is 90 (+2 to [class] Skill Levels / Skills), so we have to ensure that alvl >= 90. From then on, crafting is purely a matter of luck; any Amulet affix with level 90 or less is able to spawn (which is, in fact, any Amulet affix) and there is no way we can rule out lower affixes.
   
-# Optimised Crafting
-  
+### Optimised Crafting
 Amulets have qlvl 1, implying max{Ilvl,qlvl} = Ilvl. So, if Ilvl < 99 - int(1/2) = 99, we use (2). Since this is always the case (Ilvl cannot exceed 98), we get alvl = Ilvl. Thus, we need at least Ilvl 90,
   
     int(clvl/2) + int(ilvl/2) >= 90.
@@ -213,8 +211,7 @@ Because 93 - 5 = 88, any ilvl 88+ Amulet will suffice. That is, magic Amulets dr
 _How about the rlvl ? We know it will be 89 if +2 to [class] Skill Levels / Skills is the affix having the highest levelreq (67). However, there are two Amulet suffixes with levelreq > 67, viz, "of the Lamprey" (levelreq 73): 6 % Life Stolen Per Hit, and "of Bone Spirit" (levelreq 72): Level 1 Bone Spirit charges. Due to these, we may occasionally be looking at rlvl 95 or rlvl 94._
   
 ## Rings
-# Random Affixes
-  
+### Random Affixes
 **Desired:**
 * (P) "Platinum" (level 22, levelreq 16, group 110): +101-120 to AR
 * (P) "Great Wyrm's" (level 37, levelreq 29, group 115): +61-90 to Mana
@@ -229,8 +226,7 @@ _How about the rlvl ? We know it will be 89 if +2 to [class] Skill Levels / Skil
   
 Although the highest level is 86 (6 % Mana Stolen Per Hit), we do not necessarily want to push the alvl that far, seeing how it may result in rlvl 96 (74 + 10 + 3*4). In order to circumvent this and still be able to roll the other affixes, our target alvl should be at least 77 and at most 85.
   
-# Optimised Crafting
-  
+### Optimised Crafting
 Rings have qlvl 1, just like Amulets. Thus, we need at least Ilvl 77 and at most Ilvl 85,
   
     76 < int(clvl/2) + int(ilvl/2) < 86
@@ -247,8 +243,7 @@ Solving these simultaneously yields 79 < clvl < 84. That is,
 _Conversely, if we want every Ring to have a chance of acquiring 6 % Mana Stolen Per Hit, we should use a character of at least level 89, in which case we might occasionally be looking at rlvl 96. If we use a level 80-83 character to gamble and craft, then at most rlvl 88 ("of the Titan": levelreq = 66)._
   
 ## Gloves  
-# Random Affixes
-  
+### Random Affixes
 **Desired:**
 * (P) "Cobalt/Garnet/Coral/Jade" (level 18, levelreq 13, group 117/118/119/120): Cold/Fire/Lightning/Poison Resist +21-30 %
 * (P) "Bowyer's/Gymnastic/Spearmaiden's" (level 40, levelreq 30, group 125): +2 to Bow and Crossbow/Passive and Magic/Javelin and Spear Skills (Amazon Only)
@@ -267,7 +262,7 @@ Note that we cannot rule out the 6 charged suffixes with level < 59, because we 
   
 Looking at the above values, our initial target alvl would be at least 59 and at most 62.
   
-# Hit Power Gloves  
+### Hit Power Gloves  
 Chain Gloves (qlvl 12), Heavy Bracers (qlvl 43), Vambraces (qlvl 69). In each case, we consider max{Ilvl,qlvl} < 99 - int(qlvl/2).
   
 **Chain Gloves**
@@ -291,7 +286,7 @@ yielding 76 < clvl < 79. Use the NPC Shopping Calculator to determine who can se
 **Vambraces**
 Cannot be shopped, so we skip the calculations. Good luck gambling Vambraces, or getting them to drop, with the proper ilvl, quickly enough to compete with the other types.
   
-# Blood Gloves  
+### Blood Gloves  
 Heavy Gloves (qlvl 7), Sharkskin Gloves (qlvl 39), Vampirebone Gloves (qlvl 63). Same procedure as last recipe, Darling ? Same procedure as every recipe, n00b.
   
 **Heavy Gloves**
@@ -312,8 +307,7 @@ Cannot be shopped.
 _The Chain Gloves will have at most rlvl 77 ("of Multiple Shot": levelreq = 55) while freezing out the 6 highest charged suffixes. Both Heavy Bracers and Sharkskin Gloves are unable to get any of the 7 highest charged suffixes and should thus not exceed rlvl 73 ("of the Giant": levelreq = 51). And the Heavy Gloves, blocking the 4 highest charged suffixes from spawning, are limited to no more than rlvl 83 ("of Exploding Arrow": levelreq = 61)._
 
 ## Belts
-# Random Affixes
-  
+### Random Affixes
 **Desired:**
 * (P) "Serpent's" (level 14, levelreq 10, group 115): +11-20 to Mana
 * (P) "Cobalt/Garnet/Coral/Jade" (level 18, levelreq 13, group 117/118/119/120): Cold/Fire/Lightning/Poison Resist +21-30 %
@@ -323,10 +317,10 @@ _The Chain Gloves will have at most rlvl 77 ("of Multiple Shot": levelreq = 55) 
   
 Highest amongst these: level 71, so we need at least alvl 71 when crafting. Only Blood Belt and Caster Belt will be covered here; the other belt recipes are rarely used. In want of brevity, we head straight to the results.
   
-# Blood Belt
+### Blood Belt
 Belt (qlvl 12), Mesh Belt (qlvl 43), Mithril Coil (qlvl 75).
   
-# Caster Belt
+### Caster Belt
 Light Belt (qlvl 7), Sharkskin Belt (qlvl 39), Vampirefang Belt (qlvl 68).
   
 Maximum efficiency and to avoid having to use multiple characters,
@@ -338,8 +332,7 @@ Gamble in Hell or use the NPC Shopping Calculator to work out which vendors can 
 _At most rlvl 85 ("of Atlas": levelreq = 63)._
   
 ## Boots
-# Random Affixes
-  
+### Random Affixes
 **Desired:**
 * (P) "Dragon's" (level 52, levelreq 39, group 115): +31-40 to Mana
 * (P) "Sapphire/Ruby/Amber/Emerald" (level 25, levelreq 18, group 117/118/119/120): Cold/Fire/Lightning/Poison Resist +31-40 %
@@ -350,7 +343,7 @@ _At most rlvl 85 ("of Atlas": levelreq = 63)._
   
 Although most of the above boot affixes are desired regardless, we are mainly concerned with the popular Caster Boots, hence the inclusion of the "Dragon's" prefix. Again, leaving out the calculations.
   
-# Caster Boots
+### Caster Boots
 Boots (qlvl 3), Demonhide Boots (qlvl 36), Wyrmhide Boots (qlvl 60).
   
 Maximum efficiency and to avoid having to use multiple characters,
