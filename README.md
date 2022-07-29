@@ -9,7 +9,7 @@
 * Rings
 * Gloves
 * Belts
-* Boots
+* [Boots](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#boots)
 * [Appendix](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#appendix)
   
 ## Fundamentals of Crafting
