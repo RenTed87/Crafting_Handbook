@@ -5,7 +5,7 @@
 * [Required Level (rlvl)](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#required-level-rlvl)
 * [Affix Level (alvl)](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#affix-level-alvl)
 * [General Tips](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#general-tips)
-* Amulets
+* [Amulets](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#amulets)
 * [Rings](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#rings)
 * [Gloves](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#gloves)
 * [Belts](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#belts)
