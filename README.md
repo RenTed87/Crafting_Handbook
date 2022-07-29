@@ -384,6 +384,6 @@ The table lists character levels granting the crafted item at least 1, 2, 3, or 
     69-99           71+                                                 100 %
   
 _Character level range corresponding to Ilvl range, regardless of gambled ilvl, e.g. clvl 34 guarantees at least Ilvl 31,
-thereby excluding the possibility of 1 affix on the craft, while clvl 49 corresponds to at most Ilvl 50 (ilvl 52 or 53).
+thereby excluding the possibility of 1 affix on the craft, while clvl 49 corresponds to at most Ilvl 50 (ilvl 52 or 53)._
   
-Character levels not listed are not recommended; corresponding Ilvls would be distributed over two of the given intervals._
+_Character levels not listed are not recommended; corresponding Ilvls would be distributed over two of the given intervals._
