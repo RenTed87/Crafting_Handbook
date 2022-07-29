@@ -390,5 +390,5 @@ _Character levels not listed are not recommended; corresponding Ilvls would be d
   
   
 ### Credits
-This Crafting Handbook was writtenby the user named **Quorra** from the Guild: **SnG Team**.
+This Crafting Handbook was written by the user named **Quorra** from the Guild **SnG Team**.  
 Original guide can be found on the _We must not talk about_ Forum.
