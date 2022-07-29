@@ -387,3 +387,8 @@ _Character level range corresponding to Ilvl range, regardless of gambled ilvl, 
 thereby excluding the possibility of 1 affix on the craft, while clvl 49 corresponds to at most Ilvl 50 (ilvl 52 or 53)._
   
 _Character levels not listed are not recommended; corresponding Ilvls would be distributed over two of the given intervals._
+  
+  
+### Credits
+This Crafting Handbook was writtenby the user named **Quorra** from the Guild: **SnG Team**.
+Original guide can be found on the _We must not talk about_ Forum.
