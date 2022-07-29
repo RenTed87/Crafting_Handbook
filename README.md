@@ -7,7 +7,7 @@
 * [General Tips](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#general-tips)
 * Amulets
 * Rings
-* Gloves
+* [Gloves](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#gloves)
 * [Belts](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#belts)
 * [Boots](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#boots)
 * [Appendix](https://github.com/RenTed87/Crafting_Handbook/blob/main/README.md#appendix)
