@@ -265,7 +265,7 @@ Looking at the above values, our initial target alvl would be at least 59 and at
 ### Hit Power Gloves  
 Chain Gloves (qlvl 12), Heavy Bracers (qlvl 43), Vambraces (qlvl 69). In each case, we consider max{Ilvl,qlvl} < 99 - int(qlvl/2).
   
-**Chain Gloves**
+**Chain Gloves**  
 max{Ilvl,12} < 99 - int(12/2) = 93 <=> Ilvl < 93. Suppose this is the case. From (2), 58 < max{Ilvl,12} - 6 < 63 <=> 64 < Ilvl < 69. Notice the problem here; Ilvls 51-70: 4 affixes (20 %), 3 affixes (80 %). Only every 5th pair of gloves would get 4 affixes, on average. Since we want 4 affixes, we have to compromise. Ilvl 71-73 (alvl 65-67) would guarantee 4 affixes and still eliminate 6 of the 7 higher charged suffixes (only "of Multiple Shot" has 59 < level < 68). Plugging this into the Ilvl formula,
   
     70 < int(clvl/2) + int(ilvl/2) < 74
@@ -276,26 +276,26 @@ Similar to the restriction imposed on the Rings, but now the Ilvl range is thric
   
 from which 68 < clvl < 72. Use the NPC Shopping Calculator to get a suitable vendor selling Chain Gloves.
   
-**Heavy Bracers**
+**Heavy Bracers**  
 max{Ilvl,43} < 99 - int(43/2) = 78 <=> Ilvl < 78. Suppose this is true. Then, from (2), 58 < max{Ilvl,43} - 21 < 63 <=> 79 < Ilvl < 84, contradicting Ilvl < 78. So, we must have Ilvl >= 78 and from (3), 58 < 2*max{Ilvl,43} - 99 < 63 <=> 78 < Ilvl < 81. Plugging this into the Ilvl formula and assuming we shop the gloves,
   
     78 < int(clvl/2) + int((clvl + 5)/2) < 81
   
 yielding 76 < clvl < 79. Use the NPC Shopping Calculator to determine who can sell Heavy Bracers.
   
-**Vambraces**
+**Vambraces**  
 Cannot be shopped, so we skip the calculations. Good luck gambling Vambraces, or getting them to drop, with the proper ilvl, quickly enough to compete with the other types.
   
 ### Blood Gloves  
 Heavy Gloves (qlvl 7), Sharkskin Gloves (qlvl 39), Vampirebone Gloves (qlvl 63). Same procedure as last recipe, Darling ? Same procedure as every recipe, n00b.
   
-**Heavy Gloves**
+**Heavy Gloves**  
 70 < Ilvl < 75 (67 < alvl < 72; only the 4 highest charged suffixes (level 72+) frozen out). Shopping Heavy Gloves, 68 < clvl < 73.
   
-**Sharkskin Gloves**
+**Sharkskin Gloves**  
 77 < Ilvl < 80 (58 < alvl < 61; the 7 highest charged suffixes (level 61+) frozen out). Shopping Sharkskin Gloves, 75 < clvl < 78.
   
-**Vampirebone Gloves**
+**Vampirebone Gloves**  
 Cannot be shopped.
   
 **Summary:**
@@ -354,3 +354,36 @@ Adjust the character level accordingly if you prefer not rolling the suffix, "of
   
 _At most rlvl 74 ("of Regeneration": levelreq = 52)._
   
+## Appendix
+The table lists character levels granting the crafted item at least 1, 2, 3, or 4 random affixes.
+  
+    Magic craft supplies gambled or shopped at NPCs and subsequently crafted
+  
+    Gambled items: ilvl = clvl - 5 + rnd(10). Shopped items: ilvl = clvl + 5
+  
+                        Ilvl = int(clvl/2) + int(ilvl/2)
+  
+  
+                             Gambling  +  Crafting
+  
+     clvl *)         Ilvl        1 affix    2 affixes    3 affixes    4 affixes
+  
+     1-29            1-30          40 %        20 %         20 %         20 %
+    34-49           31-50                      60 %         20 %         20 %
+    54-69           51-70                                   80 %         20 %
+    74-99           71+                                                 100 %
+  
+  
+                             Shopping  +  Crafting
+  
+     clvl            Ilvl        1 affix    2 affixes    3 affixes    4 affixes
+  
+     1-28            1-30          40 %        20 %         20 %         20 %
+    29-48           31-50                      60 %         20 %         20 %
+    49-68           51-70                                   80 %         20 %
+    69-99           71+                                                 100 %
+  
+_Character level range corresponding to Ilvl range, regardless of gambled ilvl, e.g. clvl 34 guarantees at least Ilvl 31,
+thereby excluding the possibility of 1 affix on the craft, while clvl 49 corresponds to at most Ilvl 50 (ilvl 52 or 53).
+  
+Character levels not listed are not recommended; corresponding Ilvls would be distributed over two of the given intervals._
